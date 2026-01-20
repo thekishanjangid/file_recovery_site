@@ -9,7 +9,7 @@ export function usePayment() {
     setIsLoading(true);
     try {
       // 1. Call backend to create session
-      const response = await fetch('/api/checkout', {
+      const response = await fetch('/api/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ export function usePayment() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || 'Network error');
+        throw new Error(data.message || 'Failed to initiate checkout');
       }
 
       // 2. Redirect to Stripe
