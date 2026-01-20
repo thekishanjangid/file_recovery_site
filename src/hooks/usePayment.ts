@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
+// Stripe SDK loader removed as we use server-side redirect
 
-// Initialize outside to avoid recreating on every render
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 export function usePayment() {
   const [isLoading, setIsLoading] = useState(false);
@@ -31,22 +29,12 @@ export function usePayment() {
       if (data.url) {
         window.location.href = data.url;
       } else {
-        // Fallback to JS SDK if only ID returned
-        const stripe = await stripePromise;
-        if (!stripe) throw new Error("Stripe failed to load");
-        
-        const { error } = await stripe.redirectToCheckout({
-          sessionId: data.id,
-        });
-
-        if (error) {
-          console.error('Stripe redirect error:', error);
-        }
+        throw new Error("Missing checkout URL");
       }
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Payment error:', error);
-      alert('Failed to start payment. Please try again.');
+      alert(`Payment failed: ${error.message || 'Unknown error'}. Please check console for details.`);
     } finally {
       setIsLoading(false);
     }
