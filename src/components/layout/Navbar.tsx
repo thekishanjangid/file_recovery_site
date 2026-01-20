@@ -32,7 +32,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button size="sm">Start for free</Button>
+          <Button size="sm">Download now</Button>
         </div>
       </Container>
     </nav>
