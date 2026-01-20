@@ -30,7 +30,8 @@ import FailureReasons from "./pages/FailureReasons"
 import DataLossPrevention from "./pages/DataLossPrevention"
 
 // Determine basename for GitHub Pages or local dev
-const basename = import.meta.env.MODE === 'production' ? '/window-cleaning' : '/';
+// Determine basename - default to '/' for Vercel
+const basename = '/';
 
 export default function App() {
   return (
