@@ -28,6 +28,7 @@ import FormattedRecovery from "./pages/FormattedRecovery"
 import UsbSdRecovery from "./pages/UsbSdRecovery"
 import FailureReasons from "./pages/FailureReasons"
 import DataLossPrevention from "./pages/DataLossPrevention"
+import ReleaseNotes from "./pages/ReleaseNotes"
 
 // Determine basename for GitHub Pages or local dev
 // Determine basename - default to '/' for Vercel
@@ -64,6 +65,7 @@ export default function App() {
         <Route path="/usb-sd-recovery" element={<UsbSdRecovery />} />
         <Route path="/recovery-failure-reasons" element={<FailureReasons />} />
         <Route path="/data-loss-prevention" element={<DataLossPrevention />} />
+        <Route path="/release-notes" element={<ReleaseNotes />} />
       </Routes>
     </Router>
   )
