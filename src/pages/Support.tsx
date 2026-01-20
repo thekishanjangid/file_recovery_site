@@ -125,15 +125,15 @@ export default function SupportPage() {
                </p>
                
                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a href="mailto:support@windowsfilerecovery.com" className="group">
-                     <Button size="lg" variant="outline" className="h-auto py-6 px-8 flex flex-col items-center gap-2">
+                  <a href="mailto:support@fixovasoft.com" className="group">
+                     <Button size="lg" variant="secondary" className="h-auto py-6 px-8 flex flex-col items-center gap-2">
                         <Mail className="w-6 h-6 text-text-primary" />
                         <span className="font-bold text-lg">Email Support</span>
                         <span className="text-xs text-text-muted font-normal">Response in 24 hours</span>
                      </Button>
                   </a>
                   <a href="#" className="group">
-                      <Button size="lg" variant="outline" className="h-auto py-6 px-8 flex flex-col items-center gap-2">
+                      <Button size="lg" variant="secondary" className="h-auto py-6 px-8 flex flex-col items-center gap-2">
                         <MessageSquare className="w-6 h-6 text-text-primary" />
                         <span className="font-bold text-lg">Live Chat</span>
                         <span className="text-xs text-text-muted font-normal">Available 9am - 5pm</span>

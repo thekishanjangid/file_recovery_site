@@ -17,6 +17,7 @@ export const navigation = {
       { name: 'User Guide', href: '/user-guide' },
       { name: 'Troubleshooting', href: '/troubleshooting' },
       { name: 'Contact Us', href: '/contact' },
+      { name: 'support@fixovasoft.com', href: 'mailto:support@fixovasoft.com' },
     ],
     resources: [
       { name: 'Recovery Success', href: '/recovery-success' },

@@ -79,6 +79,14 @@ export default function Terms() {
               </p>
             </section>
 
+            {/* 5. Contact */}
+            <section className="border-t border-border pt-8 mt-16">
+               <h2 className="text-xl font-bold text-text-primary mb-4">Contact</h2>
+               <p className="text-text-secondary">
+                  For any questions regarding these terms, please email <a href="mailto:support@fixovasoft.com" className="text-brand hover:underline font-medium">support@fixovasoft.com</a>.
+               </p>
+            </section>
+
           </div>
         </Container>
       </div>

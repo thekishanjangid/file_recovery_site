@@ -64,6 +64,13 @@ export default function Disclaimer() {
                </p>
             </section>
 
+            {/* 4. Contact */}
+            <div className="border-t border-border pt-8 mt-16 text-center">
+               <p className="text-text-secondary">
+                  Questions? Reach us at <a href="mailto:support@fixovasoft.com" className="text-brand hover:underline font-medium">support@fixovasoft.com</a>.
+               </p>
+            </div>
+
           </div>
         </Container>
       </div>
