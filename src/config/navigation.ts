@@ -8,6 +8,7 @@ export const navigation = {
   ],
   footer: {
     product: [
+      { name: 'About Us', href: '/about' },
       { name: 'Free Download', href: '/download' },
       { name: 'Tech Specs', href: '/tech-specs' },
       { name: 'Release Notes', href: '/release-notes' },
