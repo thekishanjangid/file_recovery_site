@@ -12,7 +12,7 @@ export function DownloadProvider({ children }: { children: ReactNode }) {
   const [isDownloading, setIsDownloading] = useState(false);
   
   // Real file path
-  const FILE_Url = "/assets/appfile/recoveryApp.exe";
+  const FILE_Url = "/appfile/recoveryApp.exe";
   const FILE_NAME = "recoveryApp.exe";
 
   const triggerDownload = useCallback(() => {
