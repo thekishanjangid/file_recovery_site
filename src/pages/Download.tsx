@@ -6,8 +6,11 @@ import {
   Download, ShieldCheck, AlertTriangle, Monitor, 
   HardDrive, Cpu, FileCog, CheckCircle2, HelpCircle 
 } from "lucide-react"
+import { useDownload } from "../hooks/useDownload"
 
 export default function DownloadPage() {
+  const { triggerDownload } = useDownload();
+
   return (
     <AppLayout>
       {/* 1. Page Introduction & Primary Download */}
@@ -41,7 +44,7 @@ export default function DownloadPage() {
                   </div>
                </div>
                
-               <Button size="lg" className="w-full text-lg h-14 group mb-4">
+               <Button size="lg" className="w-full text-lg h-14 group mb-4" onClick={triggerDownload}>
                   <Download className="mr-2 h-5 w-5 group-hover:-translate-y-1 transition-transform" />
                   Download for Windows
                </Button>

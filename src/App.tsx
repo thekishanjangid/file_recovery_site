@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import ScrollToTop from "./components/ui/ScrollToTop"
+import { DownloadProvider } from "./context/DownloadContext"
 
 // Pages
 import Home from "./pages/Home"
@@ -38,6 +39,8 @@ const basename = '/';
 export default function App() {
   return (
     <Router basename={basename}>
+      <DownloadProvider>
+
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -69,6 +72,7 @@ export default function App() {
         <Route path="/release-notes" element={<ReleaseNotes />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      </DownloadProvider>
     </Router>
   )
 }

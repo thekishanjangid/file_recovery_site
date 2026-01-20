@@ -2,8 +2,11 @@ import { Container } from "../ui/Container"
 import { Button } from "../ui/Button"
 import { Badge } from "../ui/Badge"
 import { ArrowRight, Download, ShieldCheck } from "lucide-react"
+import { useDownload } from "../../hooks/useDownload"
 
 export function Hero() {
+  const { triggerDownload } = useDownload();
+
   return (
     <section className="relative pt-24 pb-32 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-surface via-background to-background" />
@@ -26,7 +29,7 @@ export function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-16">
-          <Button size="lg" className="h-12 px-8 text-base group">
+          <Button size="lg" className="h-12 px-8 text-base group" onClick={triggerDownload}>
             <Download className="mr-2 h-4 w-4" />
             Download Free Version
           </Button>

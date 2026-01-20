@@ -1,7 +1,9 @@
 import { Container } from "../ui/Container"
 import { Button } from "../ui/Button"
+import { useDownload } from "../../hooks/useDownload"
 
 export function Cta() {
+  const { triggerDownload } = useDownload();
   return (
     <section className="py-24 border-t border-border bg-surface/30">
       <Container>
@@ -13,7 +15,7 @@ export function Cta() {
             Every minute you use your computer reduces the chance of a perfect recovery. Stop writing data and start your scan now.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-             <Button size="lg">Download Windows File Recovery</Button>
+             <Button size="lg" onClick={triggerDownload}>Download Windows File Recovery</Button>
              <Button variant="secondary" size="lg">See How It Works</Button>
           </div>
         </div>
@@ -21,3 +23,4 @@ export function Cta() {
     </section>
   )
 }
+

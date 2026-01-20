@@ -3,8 +3,11 @@ import { Button } from "../ui/Button"
 import { Zap } from "lucide-react"
 import { Link } from "react-router-dom"
 import { navigation } from "../../config/navigation"
+import { useDownload } from "../../hooks/useDownload"
 
 export function Navbar() {
+  const { triggerDownload } = useDownload();
+
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between">
@@ -32,7 +35,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button size="sm">Download now</Button>
+          <Button size="sm" onClick={triggerDownload}>Download now</Button>
         </div>
       </Container>
     </nav>
