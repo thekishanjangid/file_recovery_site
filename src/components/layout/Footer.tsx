@@ -31,7 +31,7 @@ export function Footer() {
         
         <div className="mt-16 border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-text-muted">
-            &copy; {new Date().getFullYear()} Acme Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} Fixovasoft. All rights reserved.
           </p>
           <div className="flex gap-4">
             {/* Social icons placeholder */}

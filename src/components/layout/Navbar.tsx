@@ -16,7 +16,7 @@ export function Navbar() {
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand text-white">
             <Zap className="h-4 w-4 fill-current" />
           </div>
-          <span className="text-lg font-bold tracking-tight text-text-primary">Acme.ai</span>
+          <span className="text-lg font-bold tracking-tight text-text-primary">Fixovasoft</span>
         </Link>
 
         <div className="hidden md:flex md:gap-x-8">

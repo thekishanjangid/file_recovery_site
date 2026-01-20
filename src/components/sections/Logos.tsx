@@ -1,7 +1,7 @@
 import { Container } from "../ui/Container"
 
 const LOGOS = [
-  "Acme Corp", "Global Bank", "SaaS Inc", "TechFlow", "Quantum", "Hyperion"
+  "Apex Corp", "Global Bank", "SaaS Inc", "TechFlow", "Quantum", "Hyperion"
 ]
 
 export function Logos() {
