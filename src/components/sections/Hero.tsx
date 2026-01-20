@@ -1,11 +1,13 @@
 import { Container } from "../ui/Container"
 import { Button } from "../ui/Button"
 import { Badge } from "../ui/Badge"
-import { ArrowRight, Download, ShieldCheck } from "lucide-react"
+import { ArrowRight, Download, ShieldCheck, Loader2 } from "lucide-react"
 import { useDownload } from "../../hooks/useDownload"
+import { usePayment } from "../../hooks/usePayment"
 
 export function Hero() {
   const { triggerDownload } = useDownload();
+  const { handleCheckout, isLoading } = usePayment();
 
   return (
     <section className="relative pt-24 pb-32 overflow-hidden">
@@ -33,9 +35,19 @@ export function Hero() {
             <Download className="mr-2 h-4 w-4" />
             Download Free Version
           </Button>
-          <Button variant="secondary" size="lg" className="h-12 px-8 text-base">
-            <ShieldCheck className="mr-2 h-4 w-4 text-green-600" />
-            See How It Works
+          <Button 
+            variant="secondary" 
+            size="lg" 
+            className="h-12 px-8 text-base disabled:opacity-70 disabled:cursor-not-allowed"
+            onClick={handleCheckout}
+            disabled={isLoading}
+          >
+            {isLoading ? (
+               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            ) : (
+               <ShieldCheck className="mr-2 h-4 w-4 text-green-600" />
+            )}
+            {isLoading ? "Redirecting..." : "Get Premium License"}
           </Button>
         </div>
 
