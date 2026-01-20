@@ -31,6 +31,9 @@ import FailureReasons from "./pages/FailureReasons"
 import DataLossPrevention from "./pages/DataLossPrevention"
 import ReleaseNotes from "./pages/ReleaseNotes"
 import About from "./pages/About"
+import Premium from "./pages/Premium"
+import PaymentSuccess from "./pages/PaymentSuccess"
+import PaymentCancel from "./pages/PaymentCancel"
 
 // Determine basename for GitHub Pages or local dev
 // Determine basename - default to '/' for Vercel
@@ -71,6 +74,9 @@ export default function App() {
         <Route path="/data-loss-prevention" element={<DataLossPrevention />} />
         <Route path="/release-notes" element={<ReleaseNotes />} />
         <Route path="/about" element={<About />} />
+        <Route path="/premium" element={<Premium />} />
+        <Route path="/payment-success" element={<PaymentSuccess />} />
+        <Route path="/payment-cancel" element={<PaymentCancel />} />
       </Routes>
       </DownloadProvider>
     </Router>
