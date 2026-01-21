@@ -39,13 +39,12 @@ export function Hero() {
             Download Free Version
           </Button>
           <Button 
-            variant="secondary" 
             size="lg" 
-            className="h-12 px-8 text-base"
+            className="h-12 px-8 text-base bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white shadow-lg shadow-emerald-500/25 border-t border-emerald-400/20 hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-300 transform hover:-translate-y-0.5"
             onClick={() => navigate('/premium')}
           >
-             <ShieldCheck className="mr-2 h-4 w-4 text-green-600" />
-            Get Premium Software
+             <ShieldCheck className="mr-2 h-4 w-4 text-white/90" />
+            Buy Premium Version
           </Button>
         </div>
 
