@@ -2,11 +2,14 @@ import { Container } from "../ui/Container"
 import { Button } from "../ui/Button"
 import { Badge } from "../ui/Badge"
 import { ArrowRight, Download, ShieldCheck, Loader2 } from "lucide-react"
+
 import { useDownload } from "../../hooks/useDownload"
+import { useNavigate } from "react-router-dom"
 
 
 export function Hero() {
   const { triggerDownload } = useDownload();
+  const navigate = useNavigate();
 
 
   return (
@@ -39,7 +42,7 @@ export function Hero() {
             variant="secondary" 
             size="lg" 
             className="h-12 px-8 text-base"
-            onClick={() => window.location.href = '/premium'}
+            onClick={() => navigate('/premium')}
           >
              <ShieldCheck className="mr-2 h-4 w-4 text-green-600" />
             Get Premium Software
