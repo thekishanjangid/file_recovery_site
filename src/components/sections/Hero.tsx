@@ -42,7 +42,7 @@ export function Hero() {
             onClick={() => window.location.href = '/premium'}
           >
              <ShieldCheck className="mr-2 h-4 w-4 text-green-600" />
-            Get Premium License
+            Get Premium Software
           </Button>
         </div>
 
